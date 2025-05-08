@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="user-list">
+        <ul>
+            <li>Alice</li>
+            <li>Bob</li>
+            <li>Charlie</li>
+        </ul>
+    </div>
+    <script>
+
+        const userList = document.querySelector('#user-list ul');
+
+        //new <li> element
+        const newUser = document.createElement('li');
+
+        newUser.textContent = 'David';
+
+        // Append the user
+        userList.appendChild(newUser);
+
+
+        const firstUser = userList.querySelector('li:first-child');
+        if (firstUser) {
+            firstUser.remove();
+        }
+    </script>
+
+</body>
+
+</html>
